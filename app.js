@@ -135,7 +135,7 @@ app.put('/locations/:id/:locid',(req,res)=>{
     else if(location.capacity>=location.spaceportcapacity){
         res.status(404).send('This location cant afford more spaceships,');
     }
-    else if(spaceship.status=='decommisioned'||spaceship,status=='maintanance'){
+    else if(spaceship.status=='decommisioned'||spaceship.status=='maintanance'){
         res.status(404).send('This spaceship cannot travel');
     }
 });
